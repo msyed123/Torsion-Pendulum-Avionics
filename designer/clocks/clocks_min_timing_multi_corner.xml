@@ -1,0 +1,1832 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<?xml-stylesheet href="rptstyle.xsl" type="text/xsl" ?>
+<doc>
+<title>Timing Multi Corner Report Min Delay Analysis
+</title>
+<text>SmartTime Version 2021.2.0.11</text>
+<text>Microsemi Corporation - Microsemi Libero Software Release v2021.2 (Version 2021.2.0.11)</text>
+<text>Date: Tue Jan 11 13:56:05 2022
+</text>
+<table>
+<header>
+</header>
+<row>
+ <cell>Design</cell>
+ <cell>clocks</cell>
+</row>
+<row>
+ <cell>Family</cell>
+ <cell>SmartFusion2</cell>
+</row>
+<row>
+ <cell>Die</cell>
+ <cell>M2S010</cell>
+</row>
+<row>
+ <cell>Package</cell>
+ <cell>400 VF</cell>
+</row>
+<row>
+ <cell>Temperature Range</cell>
+ <cell>0 - 85 C</cell>
+</row>
+<row>
+ <cell>Voltage Range</cell>
+ <cell>1.14 - 1.26 V</cell>
+</row>
+<row>
+ <cell>Speed Grade</cell>
+ <cell>STD</cell>
+</row>
+<row>
+ <cell>Design State</cell>
+ <cell>Post-Layout</cell>
+</row>
+<row>
+ <cell>Data source</cell>
+ <cell>Production</cell>
+</row>
+<row>
+ <cell>Multi Corner Report Operating Conditions</cell>
+ <cell>BEST, TYPICAL, WORST</cell>
+</row>
+</table>
+<text></text>
+<section>
+<name>Summary</name>
+<table>
+<header>
+ <cell>Clock Domain</cell>
+ <cell>Required Period (ns)</cell>
+ <cell>Required Frequency (MHz)</cell>
+ <cell>Worst Slack (ns)</cell>
+ <cell>Operating Conditions</cell>
+</header>
+<row>
+ <cell>FCCC_C0_0/FCCC_C0_0/GL1</cell>
+ <cell>20.000</cell>
+ <cell>50.000</cell>
+ <cell>0.336</cell>
+ <cell>BEST</cell>
+</row>
+<row>
+ <cell>FCCC_C0_0/FCCC_C0_0/GL2</cell>
+ <cell>40.000</cell>
+ <cell>25.000</cell>
+ <cell>0.454</cell>
+ <cell>BEST</cell>
+</row>
+<row>
+ <cell>OSC_C0_0/OSC_C0_0/I_RCOSC_25_50MHZ/CLKOUT</cell>
+ <cell>20.000</cell>
+ <cell>50.000</cell>
+ <cell></cell>
+ <cell></cell>
+</row>
+</table>
+<text></text>
+<table>
+<header>
+ <cell></cell>
+ <cell>Worst Slack (ns)</cell>
+ <cell>Operating Conditions</cell>
+</header>
+<row>
+ <cell>Input to Output</cell>
+ <cell></cell>
+ <cell></cell>
+</row>
+</table>
+</section>
+<section>
+<name>Clock Domain FCCC_C0_0/FCCC_C0_0/GL1</name>
+<text></text>
+<section>
+<name>SET Register to Register</name>
+<table>
+<header>
+ <cell/>
+ <cell>From</cell>
+ <cell>To</cell>
+ <cell>Delay (ns)</cell>
+ <cell>Slack (ns)</cell>
+ <cell>Arrival (ns)</cell>
+ <cell>Required (ns)</cell>
+ <cell>Hold (ns)</cell>
+ <cell>Operating Conditions</cell>
+</header>
+<row>
+ <cell>Path 1</cell>
+ <cell>spi_master_0/mosi_cl:CLK</cell>
+ <cell>spi_master_0/mosi_cl:D</cell>
+ <cell>0.336</cell>
+ <cell>0.336</cell>
+ <cell>3.796</cell>
+ <cell>3.460</cell>
+ <cell>0.000</cell>
+ <cell>BEST</cell>
+</row>
+<row>
+ <cell>Path 2</cell>
+ <cell>spi_master_0/sclk:CLK</cell>
+ <cell>spi_master_0/sclk:D</cell>
+ <cell>0.340</cell>
+ <cell>0.340</cell>
+ <cell>3.800</cell>
+ <cell>3.460</cell>
+ <cell>0.000</cell>
+ <cell>BEST</cell>
+</row>
+<row>
+ <cell>Path 3</cell>
+ <cell>spi_master_0/assert_data:CLK</cell>
+ <cell>spi_master_0/assert_data:D</cell>
+ <cell>0.350</cell>
+ <cell>0.350</cell>
+ <cell>3.802</cell>
+ <cell>3.452</cell>
+ <cell>0.000</cell>
+ <cell>BEST</cell>
+</row>
+<row>
+ <cell>Path 4</cell>
+ <cell>spi_master_0/state[0]:CLK</cell>
+ <cell>spi_master_0/state[0]:D</cell>
+ <cell>0.356</cell>
+ <cell>0.356</cell>
+ <cell>3.808</cell>
+ <cell>3.452</cell>
+ <cell>0.000</cell>
+ <cell>BEST</cell>
+</row>
+<row>
+ <cell>Path 5</cell>
+ <cell>spi_master_0/count[20]:CLK</cell>
+ <cell>spi_master_0/count[20]:D</cell>
+ <cell>0.443</cell>
+ <cell>0.443</cell>
+ <cell>3.917</cell>
+ <cell>3.474</cell>
+ <cell>0.000</cell>
+ <cell>BEST</cell>
+</row>
+</table>
+<text></text>
+<section><name>Expanded Path 1</name></section>
+<table>
+<header>
+ <cell>Pin Name</cell>
+ <cell>Type</cell>
+ <cell>Net Name</cell>
+ <cell>Cell Name</cell>
+ <cell>Op</cell>
+ <cell>Delay (ns)</cell>
+ <cell>Total (ns)</cell>
+ <cell>Fanout</cell>
+ <cell>Edge</cell>
+</header>
+<row>
+ <cell>From: spi_master_0/mosi_cl:CLK</cell>
+ <cell></cell>
+ <cell></cell>
+ <cell></cell>
+ <cell></cell>
+ <cell></cell>
+ <cell></cell>
+ <cell></cell>
+ <cell></cell>
+</row>
+<row>
+ <cell>To: spi_master_0/mosi_cl:D</cell>
+ <cell></cell>
+ <cell></cell>
+ <cell></cell>
+ <cell></cell>
+ <cell></cell>
+ <cell></cell>
+ <cell></cell>
+ <cell></cell>
+</row>
+<row>
+ <cell>data arrival time</cell>
+ <cell></cell>
+ <cell></cell>
+ <cell></cell>
+ <cell></cell>
+ <cell></cell>
+ <cell>3.796</cell>
+ <cell></cell>
+ <cell></cell>
+</row>
+<row>
+ <cell>data required time</cell>
+ <cell></cell>
+ <cell></cell>
+ <cell></cell>
+ <cell>-</cell>
+ <cell></cell>
+ <cell>3.460</cell>
+ <cell></cell>
+ <cell></cell>
+</row>
+<row>
+ <cell>slack</cell>
+ <cell></cell>
+ <cell></cell>
+ <cell></cell>
+ <cell></cell>
+ <cell></cell>
+ <cell>0.336</cell>
+ <cell></cell>
+ <cell></cell>
+</row>
+<row>
+</row>
+<row>
+ <cell>Data arrival time calculation</cell>
+ <cell></cell>
+ <cell></cell>
+ <cell></cell>
+ <cell></cell>
+ <cell></cell>
+ <cell></cell>
+ <cell></cell>
+ <cell></cell>
+</row>
+<row>
+ <cell>FCCC_C0_0/FCCC_C0_0/GL1</cell>
+ <cell></cell>
+ <cell></cell>
+ <cell></cell>
+ <cell></cell>
+ <cell>0.000</cell>
+ <cell>0.000</cell>
+ <cell></cell>
+ <cell></cell>
+</row>
+<row>
+ <cell>FCCC_C0_0/FCCC_C0_0/CCC_INST/INST_CCC_IP:GL1</cell>
+ <cell>Clock source</cell>
+ <cell></cell>
+ <cell></cell>
+ <cell>+</cell>
+ <cell>0.000</cell>
+ <cell>0.000</cell>
+ <cell></cell>
+ <cell>r</cell>
+</row>
+<row>
+ <cell></cell>
+ <cell>Clock generation</cell>
+ <cell></cell>
+ <cell></cell>
+ <cell>+</cell>
+ <cell>2.531</cell>
+ <cell>2.531</cell>
+ <cell></cell>
+ <cell></cell>
+</row>
+<row>
+ <cell>FCCC_C0_0/FCCC_C0_0/GL1_INST:An</cell>
+ <cell>net</cell>
+ <cell>FCCC_C0_0/FCCC_C0_0/GL1_net</cell>
+ <cell></cell>
+ <cell>+</cell>
+ <cell>0.132</cell>
+ <cell>2.663</cell>
+ <cell></cell>
+ <cell>r</cell>
+</row>
+<row>
+ <cell>FCCC_C0_0/FCCC_C0_0/GL1_INST:YSn</cell>
+ <cell>cell</cell>
+ <cell></cell>
+ <cell>ADLIB:GB</cell>
+ <cell>+</cell>
+ <cell>0.110</cell>
+ <cell>2.773</cell>
+ <cell>2</cell>
+ <cell>f</cell>
+</row>
+<row>
+ <cell>FCCC_C0_0/FCCC_C0_0/GL1_INST/U0_RGB1_RGB0:An</cell>
+ <cell>net</cell>
+ <cell>FCCC_C0_0/FCCC_C0_0/GL1_INST/U0_YNn_GSouth</cell>
+ <cell></cell>
+ <cell>+</cell>
+ <cell>0.191</cell>
+ <cell>2.964</cell>
+ <cell></cell>
+ <cell>f</cell>
+</row>
+<row>
+ <cell>FCCC_C0_0/FCCC_C0_0/GL1_INST/U0_RGB1_RGB0:YR</cell>
+ <cell>cell</cell>
+ <cell></cell>
+ <cell>ADLIB:RGB</cell>
+ <cell>+</cell>
+ <cell>0.168</cell>
+ <cell>3.132</cell>
+ <cell>13</cell>
+ <cell>r</cell>
+</row>
+<row>
+ <cell>spi_master_0/mosi_cl:CLK</cell>
+ <cell>net</cell>
+ <cell>FCCC_C0_0/FCCC_C0_0/GL1_INST/U0_RGB1_RGB0_rgbr_net_1</cell>
+ <cell></cell>
+ <cell>+</cell>
+ <cell>0.328</cell>
+ <cell>3.460</cell>
+ <cell></cell>
+ <cell>r</cell>
+</row>
+<row>
+ <cell>spi_master_0/mosi_cl:Q</cell>
+ <cell>cell</cell>
+ <cell></cell>
+ <cell>ADLIB:SLE</cell>
+ <cell>+</cell>
+ <cell>0.058</cell>
+ <cell>3.518</cell>
+ <cell>3</cell>
+ <cell>r</cell>
+</row>
+<row>
+ <cell>spi_master_0/mosi_cl_4:B</cell>
+ <cell>net</cell>
+ <cell>mosi_cl</cell>
+ <cell></cell>
+ <cell>+</cell>
+ <cell>0.040</cell>
+ <cell>3.558</cell>
+ <cell></cell>
+ <cell>r</cell>
+</row>
+<row>
+ <cell>spi_master_0/mosi_cl_4:Y</cell>
+ <cell>cell</cell>
+ <cell></cell>
+ <cell>ADLIB:CFG4</cell>
+ <cell>+</cell>
+ <cell>0.189</cell>
+ <cell>3.747</cell>
+ <cell>1</cell>
+ <cell>r</cell>
+</row>
+<row>
+ <cell>spi_master_0/mosi_cl:D</cell>
+ <cell>net</cell>
+ <cell>spi_master_0/mosi_cl_4_Z</cell>
+ <cell></cell>
+ <cell>+</cell>
+ <cell>0.049</cell>
+ <cell>3.796</cell>
+ <cell></cell>
+ <cell>r</cell>
+</row>
+<row>
+ <cell>data arrival time</cell>
+ <cell></cell>
+ <cell></cell>
+ <cell></cell>
+ <cell></cell>
+ <cell></cell>
+ <cell>3.796</cell>
+ <cell></cell>
+ <cell></cell>
+</row>
+<row>
+</row>
+<row>
+ <cell>Data required time calculation</cell>
+ <cell></cell>
+ <cell></cell>
+ <cell></cell>
+ <cell></cell>
+ <cell></cell>
+ <cell></cell>
+ <cell></cell>
+ <cell></cell>
+</row>
+<row>
+ <cell>FCCC_C0_0/FCCC_C0_0/GL1</cell>
+ <cell>Clock Constraint</cell>
+ <cell></cell>
+ <cell></cell>
+ <cell></cell>
+ <cell>0.000</cell>
+ <cell>0.000</cell>
+ <cell></cell>
+ <cell></cell>
+</row>
+<row>
+ <cell>FCCC_C0_0/FCCC_C0_0/CCC_INST/INST_CCC_IP:GL1</cell>
+ <cell>Clock source</cell>
+ <cell></cell>
+ <cell></cell>
+ <cell>+</cell>
+ <cell>0.000</cell>
+ <cell>0.000</cell>
+ <cell></cell>
+ <cell>r</cell>
+</row>
+<row>
+ <cell></cell>
+ <cell>Clock generation</cell>
+ <cell></cell>
+ <cell></cell>
+ <cell>+</cell>
+ <cell>2.531</cell>
+ <cell>2.531</cell>
+ <cell></cell>
+ <cell></cell>
+</row>
+<row>
+ <cell>FCCC_C0_0/FCCC_C0_0/GL1_INST:An</cell>
+ <cell>net</cell>
+ <cell>FCCC_C0_0/FCCC_C0_0/GL1_net</cell>
+ <cell></cell>
+ <cell>+</cell>
+ <cell>0.132</cell>
+ <cell>2.663</cell>
+ <cell></cell>
+ <cell>r</cell>
+</row>
+<row>
+ <cell>FCCC_C0_0/FCCC_C0_0/GL1_INST:YSn</cell>
+ <cell>cell</cell>
+ <cell></cell>
+ <cell>ADLIB:GB</cell>
+ <cell>+</cell>
+ <cell>0.110</cell>
+ <cell>2.773</cell>
+ <cell>2</cell>
+ <cell>f</cell>
+</row>
+<row>
+ <cell>FCCC_C0_0/FCCC_C0_0/GL1_INST/U0_RGB1_RGB0:An</cell>
+ <cell>net</cell>
+ <cell>FCCC_C0_0/FCCC_C0_0/GL1_INST/U0_YNn_GSouth</cell>
+ <cell></cell>
+ <cell>+</cell>
+ <cell>0.191</cell>
+ <cell>2.964</cell>
+ <cell></cell>
+ <cell>f</cell>
+</row>
+<row>
+ <cell>FCCC_C0_0/FCCC_C0_0/GL1_INST/U0_RGB1_RGB0:YR</cell>
+ <cell>cell</cell>
+ <cell></cell>
+ <cell>ADLIB:RGB</cell>
+ <cell>+</cell>
+ <cell>0.168</cell>
+ <cell>3.132</cell>
+ <cell>13</cell>
+ <cell>r</cell>
+</row>
+<row>
+ <cell>spi_master_0/mosi_cl:CLK</cell>
+ <cell>net</cell>
+ <cell>FCCC_C0_0/FCCC_C0_0/GL1_INST/U0_RGB1_RGB0_rgbr_net_1</cell>
+ <cell></cell>
+ <cell>+</cell>
+ <cell>0.328</cell>
+ <cell>3.460</cell>
+ <cell></cell>
+ <cell>r</cell>
+</row>
+<row>
+ <cell>spi_master_0/mosi_cl:D</cell>
+ <cell>Library hold time</cell>
+ <cell></cell>
+ <cell>ADLIB:SLE</cell>
+ <cell>+</cell>
+ <cell>0.000</cell>
+ <cell>3.460</cell>
+ <cell></cell>
+ <cell></cell>
+</row>
+<row>
+ <cell>data required time</cell>
+ <cell></cell>
+ <cell></cell>
+ <cell></cell>
+ <cell></cell>
+ <cell></cell>
+ <cell>3.460</cell>
+ <cell></cell>
+ <cell></cell>
+</row>
+<row>
+</row>
+<row>
+ <cell>Operating Conditions</cell>
+ <cell>BEST</cell>
+</row>
+</table>
+</section>
+<section>
+<name>SET External Hold</name>
+<text>No Path</text>
+</section>
+<section>
+<name>SET Clock to Output</name>
+<table>
+<header>
+ <cell/>
+ <cell>From</cell>
+ <cell>To</cell>
+ <cell>Delay (ns)</cell>
+ <cell>Slack (ns)</cell>
+ <cell>Arrival (ns)</cell>
+ <cell>Required (ns)</cell>
+ <cell>Clock to Out (ns)</cell>
+ <cell>Operating Conditions</cell>
+</header>
+<row>
+ <cell>Path 1</cell>
+ <cell>spi_master_0/busy:CLK</cell>
+ <cell>busy</cell>
+ <cell>2.507</cell>
+ <cell></cell>
+ <cell>5.966</cell>
+ <cell></cell>
+ <cell>5.966</cell>
+ <cell>BEST</cell>
+</row>
+<row>
+ <cell>Path 2</cell>
+ <cell>spi_master_0/ss_n[0]:CLK</cell>
+ <cell>ss</cell>
+ <cell>2.535</cell>
+ <cell></cell>
+ <cell>5.995</cell>
+ <cell></cell>
+ <cell>5.995</cell>
+ <cell>BEST</cell>
+</row>
+<row>
+ <cell>Path 3</cell>
+ <cell>spi_master_0/sclk:CLK</cell>
+ <cell>sclk</cell>
+ <cell>2.564</cell>
+ <cell></cell>
+ <cell>6.024</cell>
+ <cell></cell>
+ <cell>6.024</cell>
+ <cell>BEST</cell>
+</row>
+<row>
+ <cell>Path 4</cell>
+ <cell>spi_master_0/mosi_cl:CLK</cell>
+ <cell>mosi</cell>
+ <cell>2.904</cell>
+ <cell></cell>
+ <cell>6.364</cell>
+ <cell></cell>
+ <cell>6.364</cell>
+ <cell>BEST</cell>
+</row>
+</table>
+<text></text>
+<section><name>Expanded Path 1</name></section>
+<table>
+<header>
+ <cell>Pin Name</cell>
+ <cell>Type</cell>
+ <cell>Net Name</cell>
+ <cell>Cell Name</cell>
+ <cell>Op</cell>
+ <cell>Delay (ns)</cell>
+ <cell>Total (ns)</cell>
+ <cell>Fanout</cell>
+ <cell>Edge</cell>
+</header>
+<row>
+ <cell>From: spi_master_0/busy:CLK</cell>
+ <cell></cell>
+ <cell></cell>
+ <cell></cell>
+ <cell></cell>
+ <cell></cell>
+ <cell></cell>
+ <cell></cell>
+ <cell></cell>
+</row>
+<row>
+ <cell>To: busy</cell>
+ <cell></cell>
+ <cell></cell>
+ <cell></cell>
+ <cell></cell>
+ <cell></cell>
+ <cell></cell>
+ <cell></cell>
+ <cell></cell>
+</row>
+<row>
+ <cell>data arrival time</cell>
+ <cell></cell>
+ <cell></cell>
+ <cell></cell>
+ <cell></cell>
+ <cell></cell>
+ <cell>5.966</cell>
+ <cell></cell>
+ <cell></cell>
+</row>
+<row>
+ <cell>data required time</cell>
+ <cell></cell>
+ <cell></cell>
+ <cell></cell>
+ <cell>-</cell>
+ <cell></cell>
+ <cell>N/C</cell>
+ <cell></cell>
+ <cell></cell>
+</row>
+<row>
+ <cell>slack</cell>
+ <cell></cell>
+ <cell></cell>
+ <cell></cell>
+ <cell></cell>
+ <cell></cell>
+ <cell>N/C</cell>
+ <cell></cell>
+ <cell></cell>
+</row>
+<row>
+</row>
+<row>
+ <cell>Data arrival time calculation</cell>
+ <cell></cell>
+ <cell></cell>
+ <cell></cell>
+ <cell></cell>
+ <cell></cell>
+ <cell></cell>
+ <cell></cell>
+ <cell></cell>
+</row>
+<row>
+ <cell>FCCC_C0_0/FCCC_C0_0/GL1</cell>
+ <cell></cell>
+ <cell></cell>
+ <cell></cell>
+ <cell></cell>
+ <cell>0.000</cell>
+ <cell>0.000</cell>
+ <cell></cell>
+ <cell></cell>
+</row>
+<row>
+ <cell>FCCC_C0_0/FCCC_C0_0/CCC_INST/INST_CCC_IP:GL1</cell>
+ <cell>Clock source</cell>
+ <cell></cell>
+ <cell></cell>
+ <cell>+</cell>
+ <cell>0.000</cell>
+ <cell>0.000</cell>
+ <cell></cell>
+ <cell>r</cell>
+</row>
+<row>
+ <cell></cell>
+ <cell>Clock generation</cell>
+ <cell></cell>
+ <cell></cell>
+ <cell>+</cell>
+ <cell>2.531</cell>
+ <cell>2.531</cell>
+ <cell></cell>
+ <cell></cell>
+</row>
+<row>
+ <cell>FCCC_C0_0/FCCC_C0_0/GL1_INST:An</cell>
+ <cell>net</cell>
+ <cell>FCCC_C0_0/FCCC_C0_0/GL1_net</cell>
+ <cell></cell>
+ <cell>+</cell>
+ <cell>0.132</cell>
+ <cell>2.663</cell>
+ <cell></cell>
+ <cell>r</cell>
+</row>
+<row>
+ <cell>FCCC_C0_0/FCCC_C0_0/GL1_INST:YSn</cell>
+ <cell>cell</cell>
+ <cell></cell>
+ <cell>ADLIB:GB</cell>
+ <cell>+</cell>
+ <cell>0.110</cell>
+ <cell>2.773</cell>
+ <cell>2</cell>
+ <cell>f</cell>
+</row>
+<row>
+ <cell>FCCC_C0_0/FCCC_C0_0/GL1_INST/U0_RGB1_RGB0:An</cell>
+ <cell>net</cell>
+ <cell>FCCC_C0_0/FCCC_C0_0/GL1_INST/U0_YNn_GSouth</cell>
+ <cell></cell>
+ <cell>+</cell>
+ <cell>0.191</cell>
+ <cell>2.964</cell>
+ <cell></cell>
+ <cell>f</cell>
+</row>
+<row>
+ <cell>FCCC_C0_0/FCCC_C0_0/GL1_INST/U0_RGB1_RGB0:YR</cell>
+ <cell>cell</cell>
+ <cell></cell>
+ <cell>ADLIB:RGB</cell>
+ <cell>+</cell>
+ <cell>0.168</cell>
+ <cell>3.132</cell>
+ <cell>13</cell>
+ <cell>r</cell>
+</row>
+<row>
+ <cell>spi_master_0/busy:CLK</cell>
+ <cell>net</cell>
+ <cell>FCCC_C0_0/FCCC_C0_0/GL1_INST/U0_RGB1_RGB0_rgbr_net_1</cell>
+ <cell></cell>
+ <cell>+</cell>
+ <cell>0.327</cell>
+ <cell>3.459</cell>
+ <cell></cell>
+ <cell>r</cell>
+</row>
+<row>
+ <cell>spi_master_0/busy:Q</cell>
+ <cell>cell</cell>
+ <cell></cell>
+ <cell>ADLIB:SLE</cell>
+ <cell>+</cell>
+ <cell>0.058</cell>
+ <cell>3.517</cell>
+ <cell>1</cell>
+ <cell>r</cell>
+</row>
+<row>
+ <cell>busy_obuf/U0/U_IOOUTFF:A</cell>
+ <cell>net</cell>
+ <cell>busy_c</cell>
+ <cell></cell>
+ <cell>+</cell>
+ <cell>0.774</cell>
+ <cell>4.291</cell>
+ <cell></cell>
+ <cell>r</cell>
+</row>
+<row>
+ <cell>busy_obuf/U0/U_IOOUTFF:Y</cell>
+ <cell>cell</cell>
+ <cell></cell>
+ <cell>ADLIB:IOOUTFF_BYPASS</cell>
+ <cell>+</cell>
+ <cell>0.124</cell>
+ <cell>4.415</cell>
+ <cell>1</cell>
+ <cell>r</cell>
+</row>
+<row>
+ <cell>busy_obuf/U0/U_IOPAD:D</cell>
+ <cell>net</cell>
+ <cell>busy_obuf/U0/DOUT</cell>
+ <cell></cell>
+ <cell>+</cell>
+ <cell>0.233</cell>
+ <cell>4.648</cell>
+ <cell></cell>
+ <cell>r</cell>
+</row>
+<row>
+ <cell>busy_obuf/U0/U_IOPAD:PAD</cell>
+ <cell>cell</cell>
+ <cell></cell>
+ <cell>ADLIB:IOPAD_TRI</cell>
+ <cell>+</cell>
+ <cell>1.318</cell>
+ <cell>5.966</cell>
+ <cell>0</cell>
+ <cell>r</cell>
+</row>
+<row>
+ <cell>busy</cell>
+ <cell>net</cell>
+ <cell>busy</cell>
+ <cell></cell>
+ <cell>+</cell>
+ <cell>0.000</cell>
+ <cell>5.966</cell>
+ <cell></cell>
+ <cell>r</cell>
+</row>
+<row>
+ <cell>data arrival time</cell>
+ <cell></cell>
+ <cell></cell>
+ <cell></cell>
+ <cell></cell>
+ <cell></cell>
+ <cell>5.966</cell>
+ <cell></cell>
+ <cell></cell>
+</row>
+<row>
+</row>
+<row>
+ <cell>Data required time calculation</cell>
+ <cell></cell>
+ <cell></cell>
+ <cell></cell>
+ <cell></cell>
+ <cell></cell>
+ <cell></cell>
+ <cell></cell>
+ <cell></cell>
+</row>
+<row>
+ <cell>FCCC_C0_0/FCCC_C0_0/GL1</cell>
+ <cell></cell>
+ <cell></cell>
+ <cell></cell>
+ <cell></cell>
+ <cell>N/C</cell>
+ <cell>N/C</cell>
+ <cell></cell>
+ <cell></cell>
+</row>
+<row>
+ <cell>FCCC_C0_0/FCCC_C0_0/CCC_INST/INST_CCC_IP:GL1</cell>
+ <cell>Clock source</cell>
+ <cell></cell>
+ <cell></cell>
+ <cell>+</cell>
+ <cell>0.000</cell>
+ <cell>N/C</cell>
+ <cell></cell>
+ <cell>r</cell>
+</row>
+<row>
+ <cell></cell>
+ <cell>Clock generation</cell>
+ <cell></cell>
+ <cell></cell>
+ <cell>+</cell>
+ <cell>2.531</cell>
+ <cell>N/C</cell>
+ <cell></cell>
+ <cell></cell>
+</row>
+<row>
+ <cell>busy</cell>
+ <cell></cell>
+ <cell></cell>
+ <cell></cell>
+ <cell></cell>
+ <cell></cell>
+ <cell>N/C</cell>
+ <cell></cell>
+ <cell>r</cell>
+</row>
+<row>
+</row>
+<row>
+ <cell>Operating Conditions</cell>
+ <cell>BEST</cell>
+</row>
+</table>
+</section>
+<section>
+<name>SET Register to Asynchronous</name>
+<text>No Path</text>
+</section>
+<section>
+<name>SET External Removal</name>
+<text>No Path</text>
+</section>
+<section>
+<name>SET Asynchronous to Register</name>
+<text>No Path</text>
+</section>
+<section>
+<name>SET FCCC_C0_0/FCCC_C0_0/GL2 to FCCC_C0_0/FCCC_C0_0/GL1</name>
+<table>
+<header>
+ <cell/>
+ <cell>From</cell>
+ <cell>To</cell>
+ <cell>Delay (ns)</cell>
+ <cell>Slack (ns)</cell>
+ <cell>Arrival (ns)</cell>
+ <cell>Required (ns)</cell>
+ <cell>Hold (ns)</cell>
+ <cell>Operating Conditions</cell>
+</header>
+<row>
+ <cell>Path 1</cell>
+ <cell>spi_interface_handler_0/enable:CLK</cell>
+ <cell>spi_master_0/busy:D</cell>
+ <cell>0.727</cell>
+ <cell>0.932</cell>
+ <cell>4.401</cell>
+ <cell>3.469</cell>
+ <cell>0.000</cell>
+ <cell>BEST</cell>
+</row>
+<row>
+ <cell>Path 2</cell>
+ <cell>spi_interface_handler_0/enable:CLK</cell>
+ <cell>spi_master_0/sclk:D</cell>
+ <cell>0.736</cell>
+ <cell>0.940</cell>
+ <cell>4.410</cell>
+ <cell>3.470</cell>
+ <cell>0.000</cell>
+ <cell>BEST</cell>
+</row>
+<row>
+ <cell>Path 3</cell>
+ <cell>spi_interface_handler_0/enable:CLK</cell>
+ <cell>spi_master_0/state[0]:D</cell>
+ <cell>0.729</cell>
+ <cell>0.941</cell>
+ <cell>4.403</cell>
+ <cell>3.462</cell>
+ <cell>0.000</cell>
+ <cell>BEST</cell>
+</row>
+<row>
+ <cell>Path 4</cell>
+ <cell>spi_interface_handler_0/enable:CLK</cell>
+ <cell>spi_master_0/assert_data:D</cell>
+ <cell>0.737</cell>
+ <cell>0.949</cell>
+ <cell>4.411</cell>
+ <cell>3.462</cell>
+ <cell>0.000</cell>
+ <cell>BEST</cell>
+</row>
+<row>
+ <cell>Path 5</cell>
+ <cell>spi_interface_handler_0/enable:CLK</cell>
+ <cell>spi_master_0/count[0]:EN</cell>
+ <cell>0.925</cell>
+ <cell>1.118</cell>
+ <cell>4.599</cell>
+ <cell>3.481</cell>
+ <cell>0.000</cell>
+ <cell>BEST</cell>
+</row>
+</table>
+<text></text>
+<section><name>Expanded Path 1</name></section>
+<table>
+<header>
+ <cell>Pin Name</cell>
+ <cell>Type</cell>
+ <cell>Net Name</cell>
+ <cell>Cell Name</cell>
+ <cell>Op</cell>
+ <cell>Delay (ns)</cell>
+ <cell>Total (ns)</cell>
+ <cell>Fanout</cell>
+ <cell>Edge</cell>
+</header>
+<row>
+ <cell>From: spi_interface_handler_0/enable:CLK</cell>
+ <cell></cell>
+ <cell></cell>
+ <cell></cell>
+ <cell></cell>
+ <cell></cell>
+ <cell></cell>
+ <cell></cell>
+ <cell></cell>
+</row>
+<row>
+ <cell>To: spi_master_0/busy:D</cell>
+ <cell></cell>
+ <cell></cell>
+ <cell></cell>
+ <cell></cell>
+ <cell></cell>
+ <cell></cell>
+ <cell></cell>
+ <cell></cell>
+</row>
+<row>
+ <cell>data arrival time</cell>
+ <cell></cell>
+ <cell></cell>
+ <cell></cell>
+ <cell></cell>
+ <cell></cell>
+ <cell>4.401</cell>
+ <cell></cell>
+ <cell></cell>
+</row>
+<row>
+ <cell>data required time</cell>
+ <cell></cell>
+ <cell></cell>
+ <cell></cell>
+ <cell>-</cell>
+ <cell></cell>
+ <cell>3.469</cell>
+ <cell></cell>
+ <cell></cell>
+</row>
+<row>
+ <cell>slack</cell>
+ <cell></cell>
+ <cell></cell>
+ <cell></cell>
+ <cell></cell>
+ <cell></cell>
+ <cell>0.932</cell>
+ <cell></cell>
+ <cell></cell>
+</row>
+<row>
+</row>
+<row>
+ <cell>Data arrival time calculation</cell>
+ <cell></cell>
+ <cell></cell>
+ <cell></cell>
+ <cell></cell>
+ <cell></cell>
+ <cell></cell>
+ <cell></cell>
+ <cell></cell>
+</row>
+<row>
+ <cell>FCCC_C0_0/FCCC_C0_0/GL2</cell>
+ <cell></cell>
+ <cell></cell>
+ <cell></cell>
+ <cell></cell>
+ <cell>0.000</cell>
+ <cell>0.000</cell>
+ <cell></cell>
+ <cell></cell>
+</row>
+<row>
+ <cell>FCCC_C0_0/FCCC_C0_0/CCC_INST/INST_CCC_IP:GL2</cell>
+ <cell>Clock source</cell>
+ <cell></cell>
+ <cell></cell>
+ <cell>+</cell>
+ <cell>0.000</cell>
+ <cell>0.000</cell>
+ <cell></cell>
+ <cell>r</cell>
+</row>
+<row>
+ <cell></cell>
+ <cell>Clock generation</cell>
+ <cell></cell>
+ <cell></cell>
+ <cell>+</cell>
+ <cell>2.734</cell>
+ <cell>2.734</cell>
+ <cell></cell>
+ <cell></cell>
+</row>
+<row>
+ <cell>FCCC_C0_0/FCCC_C0_0/GL2_INST:An</cell>
+ <cell>net</cell>
+ <cell>FCCC_C0_0/FCCC_C0_0/GL2_net</cell>
+ <cell></cell>
+ <cell>+</cell>
+ <cell>0.135</cell>
+ <cell>2.869</cell>
+ <cell></cell>
+ <cell>r</cell>
+</row>
+<row>
+ <cell>FCCC_C0_0/FCCC_C0_0/GL2_INST:YSn</cell>
+ <cell>cell</cell>
+ <cell></cell>
+ <cell>ADLIB:GB</cell>
+ <cell>+</cell>
+ <cell>0.110</cell>
+ <cell>2.979</cell>
+ <cell>2</cell>
+ <cell>f</cell>
+</row>
+<row>
+ <cell>FCCC_C0_0/FCCC_C0_0/GL2_INST/U0_RGB1:An</cell>
+ <cell>net</cell>
+ <cell>FCCC_C0_0/FCCC_C0_0/GL2_INST/U0_YNn_GSouth</cell>
+ <cell></cell>
+ <cell>+</cell>
+ <cell>0.194</cell>
+ <cell>3.173</cell>
+ <cell></cell>
+ <cell>f</cell>
+</row>
+<row>
+ <cell>FCCC_C0_0/FCCC_C0_0/GL2_INST/U0_RGB1:YR</cell>
+ <cell>cell</cell>
+ <cell></cell>
+ <cell>ADLIB:RGB</cell>
+ <cell>+</cell>
+ <cell>0.168</cell>
+ <cell>3.341</cell>
+ <cell>29</cell>
+ <cell>r</cell>
+</row>
+<row>
+ <cell>spi_interface_handler_0/enable:CLK</cell>
+ <cell>net</cell>
+ <cell>FCCC_C0_0/FCCC_C0_0/GL2_INST/U0_RGB1_YR</cell>
+ <cell></cell>
+ <cell>+</cell>
+ <cell>0.333</cell>
+ <cell>3.674</cell>
+ <cell></cell>
+ <cell>r</cell>
+</row>
+<row>
+ <cell>spi_interface_handler_0/enable:Q</cell>
+ <cell>cell</cell>
+ <cell></cell>
+ <cell>ADLIB:SLE</cell>
+ <cell>+</cell>
+ <cell>0.072</cell>
+ <cell>3.746</cell>
+ <cell>6</cell>
+ <cell>f</cell>
+</row>
+<row>
+ <cell>spi_master_0/busy_7_0:C</cell>
+ <cell>net</cell>
+ <cell>spi_interface_handler_0_enable</cell>
+ <cell></cell>
+ <cell>+</cell>
+ <cell>0.467</cell>
+ <cell>4.213</cell>
+ <cell></cell>
+ <cell>f</cell>
+</row>
+<row>
+ <cell>spi_master_0/busy_7_0:Y</cell>
+ <cell>cell</cell>
+ <cell></cell>
+ <cell>ADLIB:CFG4</cell>
+ <cell>+</cell>
+ <cell>0.139</cell>
+ <cell>4.352</cell>
+ <cell>1</cell>
+ <cell>f</cell>
+</row>
+<row>
+ <cell>spi_master_0/busy:D</cell>
+ <cell>net</cell>
+ <cell>spi_master_0/busy_7</cell>
+ <cell></cell>
+ <cell>+</cell>
+ <cell>0.049</cell>
+ <cell>4.401</cell>
+ <cell></cell>
+ <cell>f</cell>
+</row>
+<row>
+ <cell>data arrival time</cell>
+ <cell></cell>
+ <cell></cell>
+ <cell></cell>
+ <cell></cell>
+ <cell></cell>
+ <cell>4.401</cell>
+ <cell></cell>
+ <cell></cell>
+</row>
+<row>
+</row>
+<row>
+ <cell>Data required time calculation</cell>
+ <cell></cell>
+ <cell></cell>
+ <cell></cell>
+ <cell></cell>
+ <cell></cell>
+ <cell></cell>
+ <cell></cell>
+ <cell></cell>
+</row>
+<row>
+ <cell>FCCC_C0_0/FCCC_C0_0/GL1</cell>
+ <cell>Clock Constraint</cell>
+ <cell></cell>
+ <cell></cell>
+ <cell></cell>
+ <cell>0.000</cell>
+ <cell>0.000</cell>
+ <cell></cell>
+ <cell></cell>
+</row>
+<row>
+ <cell>FCCC_C0_0/FCCC_C0_0/CCC_INST/INST_CCC_IP:GL1</cell>
+ <cell>Clock source</cell>
+ <cell></cell>
+ <cell></cell>
+ <cell>+</cell>
+ <cell>0.000</cell>
+ <cell>0.000</cell>
+ <cell></cell>
+ <cell>r</cell>
+</row>
+<row>
+ <cell></cell>
+ <cell>Clock generation</cell>
+ <cell></cell>
+ <cell></cell>
+ <cell>+</cell>
+ <cell>2.531</cell>
+ <cell>2.531</cell>
+ <cell></cell>
+ <cell></cell>
+</row>
+<row>
+ <cell>FCCC_C0_0/FCCC_C0_0/GL1_INST:An</cell>
+ <cell>net</cell>
+ <cell>FCCC_C0_0/FCCC_C0_0/GL1_net</cell>
+ <cell></cell>
+ <cell>+</cell>
+ <cell>0.132</cell>
+ <cell>2.663</cell>
+ <cell></cell>
+ <cell>r</cell>
+</row>
+<row>
+ <cell>FCCC_C0_0/FCCC_C0_0/GL1_INST:YSn</cell>
+ <cell>cell</cell>
+ <cell></cell>
+ <cell>ADLIB:GB</cell>
+ <cell>+</cell>
+ <cell>0.110</cell>
+ <cell>2.773</cell>
+ <cell>2</cell>
+ <cell>f</cell>
+</row>
+<row>
+ <cell>FCCC_C0_0/FCCC_C0_0/GL1_INST/U0_RGB1_RGB0:An</cell>
+ <cell>net</cell>
+ <cell>FCCC_C0_0/FCCC_C0_0/GL1_INST/U0_YNn_GSouth</cell>
+ <cell></cell>
+ <cell>+</cell>
+ <cell>0.191</cell>
+ <cell>2.964</cell>
+ <cell></cell>
+ <cell>f</cell>
+</row>
+<row>
+ <cell>FCCC_C0_0/FCCC_C0_0/GL1_INST/U0_RGB1_RGB0:YR</cell>
+ <cell>cell</cell>
+ <cell></cell>
+ <cell>ADLIB:RGB</cell>
+ <cell>+</cell>
+ <cell>0.168</cell>
+ <cell>3.132</cell>
+ <cell>13</cell>
+ <cell>r</cell>
+</row>
+<row>
+ <cell>spi_master_0/busy:CLK</cell>
+ <cell>net</cell>
+ <cell>FCCC_C0_0/FCCC_C0_0/GL1_INST/U0_RGB1_RGB0_rgbr_net_1</cell>
+ <cell></cell>
+ <cell>+</cell>
+ <cell>0.337</cell>
+ <cell>3.469</cell>
+ <cell></cell>
+ <cell>r</cell>
+</row>
+<row>
+ <cell>spi_master_0/busy:D</cell>
+ <cell>Library hold time</cell>
+ <cell></cell>
+ <cell>ADLIB:SLE</cell>
+ <cell>+</cell>
+ <cell>0.000</cell>
+ <cell>3.469</cell>
+ <cell></cell>
+ <cell></cell>
+</row>
+<row>
+ <cell>data required time</cell>
+ <cell></cell>
+ <cell></cell>
+ <cell></cell>
+ <cell></cell>
+ <cell></cell>
+ <cell>3.469</cell>
+ <cell></cell>
+ <cell></cell>
+</row>
+<row>
+</row>
+<row>
+ <cell>Operating Conditions</cell>
+ <cell>BEST</cell>
+</row>
+</table>
+</section>
+</section>
+<section>
+<name>Clock Domain FCCC_C0_0/FCCC_C0_0/GL2</name>
+<text></text>
+<section>
+<name>SET Register to Register</name>
+<table>
+<header>
+ <cell/>
+ <cell>From</cell>
+ <cell>To</cell>
+ <cell>Delay (ns)</cell>
+ <cell>Slack (ns)</cell>
+ <cell>Arrival (ns)</cell>
+ <cell>Required (ns)</cell>
+ <cell>Hold (ns)</cell>
+ <cell>Operating Conditions</cell>
+</header>
+<row>
+ <cell>Path 1</cell>
+ <cell>spi_interface_handler_0/counter[0]:CLK</cell>
+ <cell>spi_interface_handler_0/counter[0]:D</cell>
+ <cell>0.454</cell>
+ <cell>0.454</cell>
+ <cell>4.107</cell>
+ <cell>3.653</cell>
+ <cell>0.000</cell>
+ <cell>BEST</cell>
+</row>
+<row>
+ <cell>Path 2</cell>
+ <cell>spi_interface_handler_0/counter[15]:CLK</cell>
+ <cell>spi_interface_handler_0/counter[15]:D</cell>
+ <cell>0.461</cell>
+ <cell>0.461</cell>
+ <cell>4.145</cell>
+ <cell>3.684</cell>
+ <cell>0.000</cell>
+ <cell>BEST</cell>
+</row>
+<row>
+ <cell>Path 3</cell>
+ <cell>spi_interface_handler_0/counter[11]:CLK</cell>
+ <cell>spi_interface_handler_0/counter[11]:D</cell>
+ <cell>0.462</cell>
+ <cell>0.462</cell>
+ <cell>4.136</cell>
+ <cell>3.674</cell>
+ <cell>0.000</cell>
+ <cell>BEST</cell>
+</row>
+<row>
+ <cell>Path 4</cell>
+ <cell>spi_interface_handler_0/counter[25]:CLK</cell>
+ <cell>spi_interface_handler_0/counter[25]:D</cell>
+ <cell>0.507</cell>
+ <cell>0.507</cell>
+ <cell>4.177</cell>
+ <cell>3.670</cell>
+ <cell>0.000</cell>
+ <cell>BEST</cell>
+</row>
+<row>
+ <cell>Path 5</cell>
+ <cell>spi_interface_handler_0/counter[29]:CLK</cell>
+ <cell>spi_interface_handler_0/counter[29]:D</cell>
+ <cell>0.508</cell>
+ <cell>0.508</cell>
+ <cell>4.180</cell>
+ <cell>3.672</cell>
+ <cell>0.000</cell>
+ <cell>BEST</cell>
+</row>
+</table>
+<text></text>
+<section><name>Expanded Path 1</name></section>
+<table>
+<header>
+ <cell>Pin Name</cell>
+ <cell>Type</cell>
+ <cell>Net Name</cell>
+ <cell>Cell Name</cell>
+ <cell>Op</cell>
+ <cell>Delay (ns)</cell>
+ <cell>Total (ns)</cell>
+ <cell>Fanout</cell>
+ <cell>Edge</cell>
+</header>
+<row>
+ <cell>From: spi_interface_handler_0/counter[0]:CLK</cell>
+ <cell></cell>
+ <cell></cell>
+ <cell></cell>
+ <cell></cell>
+ <cell></cell>
+ <cell></cell>
+ <cell></cell>
+ <cell></cell>
+</row>
+<row>
+ <cell>To: spi_interface_handler_0/counter[0]:D</cell>
+ <cell></cell>
+ <cell></cell>
+ <cell></cell>
+ <cell></cell>
+ <cell></cell>
+ <cell></cell>
+ <cell></cell>
+ <cell></cell>
+</row>
+<row>
+ <cell>data arrival time</cell>
+ <cell></cell>
+ <cell></cell>
+ <cell></cell>
+ <cell></cell>
+ <cell></cell>
+ <cell>4.107</cell>
+ <cell></cell>
+ <cell></cell>
+</row>
+<row>
+ <cell>data required time</cell>
+ <cell></cell>
+ <cell></cell>
+ <cell></cell>
+ <cell>-</cell>
+ <cell></cell>
+ <cell>3.653</cell>
+ <cell></cell>
+ <cell></cell>
+</row>
+<row>
+ <cell>slack</cell>
+ <cell></cell>
+ <cell></cell>
+ <cell></cell>
+ <cell></cell>
+ <cell></cell>
+ <cell>0.454</cell>
+ <cell></cell>
+ <cell></cell>
+</row>
+<row>
+</row>
+<row>
+ <cell>Data arrival time calculation</cell>
+ <cell></cell>
+ <cell></cell>
+ <cell></cell>
+ <cell></cell>
+ <cell></cell>
+ <cell></cell>
+ <cell></cell>
+ <cell></cell>
+</row>
+<row>
+ <cell>FCCC_C0_0/FCCC_C0_0/GL2</cell>
+ <cell></cell>
+ <cell></cell>
+ <cell></cell>
+ <cell></cell>
+ <cell>0.000</cell>
+ <cell>0.000</cell>
+ <cell></cell>
+ <cell></cell>
+</row>
+<row>
+ <cell>FCCC_C0_0/FCCC_C0_0/CCC_INST/INST_CCC_IP:GL2</cell>
+ <cell>Clock source</cell>
+ <cell></cell>
+ <cell></cell>
+ <cell>+</cell>
+ <cell>0.000</cell>
+ <cell>0.000</cell>
+ <cell></cell>
+ <cell>r</cell>
+</row>
+<row>
+ <cell></cell>
+ <cell>Clock generation</cell>
+ <cell></cell>
+ <cell></cell>
+ <cell>+</cell>
+ <cell>2.734</cell>
+ <cell>2.734</cell>
+ <cell></cell>
+ <cell></cell>
+</row>
+<row>
+ <cell>FCCC_C0_0/FCCC_C0_0/GL2_INST:An</cell>
+ <cell>net</cell>
+ <cell>FCCC_C0_0/FCCC_C0_0/GL2_net</cell>
+ <cell></cell>
+ <cell>+</cell>
+ <cell>0.135</cell>
+ <cell>2.869</cell>
+ <cell></cell>
+ <cell>r</cell>
+</row>
+<row>
+ <cell>FCCC_C0_0/FCCC_C0_0/GL2_INST:YSn</cell>
+ <cell>cell</cell>
+ <cell></cell>
+ <cell>ADLIB:GB</cell>
+ <cell>+</cell>
+ <cell>0.110</cell>
+ <cell>2.979</cell>
+ <cell>2</cell>
+ <cell>f</cell>
+</row>
+<row>
+ <cell>FCCC_C0_0/FCCC_C0_0/GL2_INST/U0_RGB1_RGB0:An</cell>
+ <cell>net</cell>
+ <cell>FCCC_C0_0/FCCC_C0_0/GL2_INST/U0_YNn_GSouth</cell>
+ <cell></cell>
+ <cell>+</cell>
+ <cell>0.194</cell>
+ <cell>3.173</cell>
+ <cell></cell>
+ <cell>f</cell>
+</row>
+<row>
+ <cell>FCCC_C0_0/FCCC_C0_0/GL2_INST/U0_RGB1_RGB0:YR</cell>
+ <cell>cell</cell>
+ <cell></cell>
+ <cell>ADLIB:RGB</cell>
+ <cell>+</cell>
+ <cell>0.168</cell>
+ <cell>3.341</cell>
+ <cell>4</cell>
+ <cell>r</cell>
+</row>
+<row>
+ <cell>spi_interface_handler_0/counter[0]:CLK</cell>
+ <cell>net</cell>
+ <cell>FCCC_C0_0/FCCC_C0_0/GL2_INST/U0_RGB1_RGB0_rgbr_net_1</cell>
+ <cell></cell>
+ <cell>+</cell>
+ <cell>0.312</cell>
+ <cell>3.653</cell>
+ <cell></cell>
+ <cell>r</cell>
+</row>
+<row>
+ <cell>spi_interface_handler_0/counter[0]:Q</cell>
+ <cell>cell</cell>
+ <cell></cell>
+ <cell>ADLIB:SLE</cell>
+ <cell>+</cell>
+ <cell>0.058</cell>
+ <cell>3.711</cell>
+ <cell>4</cell>
+ <cell>r</cell>
+</row>
+<row>
+ <cell>spi_interface_handler_0/counter_RNO[0]:A</cell>
+ <cell>net</cell>
+ <cell>spi_interface_handler_0/counter_Z[0]</cell>
+ <cell></cell>
+ <cell>+</cell>
+ <cell>0.250</cell>
+ <cell>3.961</cell>
+ <cell></cell>
+ <cell>r</cell>
+</row>
+<row>
+ <cell>spi_interface_handler_0/counter_RNO[0]:Y</cell>
+ <cell>cell</cell>
+ <cell></cell>
+ <cell>ADLIB:CFG1</cell>
+ <cell>+</cell>
+ <cell>0.095</cell>
+ <cell>4.056</cell>
+ <cell>1</cell>
+ <cell>f</cell>
+</row>
+<row>
+ <cell>spi_interface_handler_0/counter[0]:D</cell>
+ <cell>net</cell>
+ <cell>spi_interface_handler_0/counter_i[0]</cell>
+ <cell></cell>
+ <cell>+</cell>
+ <cell>0.051</cell>
+ <cell>4.107</cell>
+ <cell></cell>
+ <cell>f</cell>
+</row>
+<row>
+ <cell>data arrival time</cell>
+ <cell></cell>
+ <cell></cell>
+ <cell></cell>
+ <cell></cell>
+ <cell></cell>
+ <cell>4.107</cell>
+ <cell></cell>
+ <cell></cell>
+</row>
+<row>
+</row>
+<row>
+ <cell>Data required time calculation</cell>
+ <cell></cell>
+ <cell></cell>
+ <cell></cell>
+ <cell></cell>
+ <cell></cell>
+ <cell></cell>
+ <cell></cell>
+ <cell></cell>
+</row>
+<row>
+ <cell>FCCC_C0_0/FCCC_C0_0/GL2</cell>
+ <cell>Clock Constraint</cell>
+ <cell></cell>
+ <cell></cell>
+ <cell></cell>
+ <cell>0.000</cell>
+ <cell>0.000</cell>
+ <cell></cell>
+ <cell></cell>
+</row>
+<row>
+ <cell>FCCC_C0_0/FCCC_C0_0/CCC_INST/INST_CCC_IP:GL2</cell>
+ <cell>Clock source</cell>
+ <cell></cell>
+ <cell></cell>
+ <cell>+</cell>
+ <cell>0.000</cell>
+ <cell>0.000</cell>
+ <cell></cell>
+ <cell>r</cell>
+</row>
+<row>
+ <cell></cell>
+ <cell>Clock generation</cell>
+ <cell></cell>
+ <cell></cell>
+ <cell>+</cell>
+ <cell>2.734</cell>
+ <cell>2.734</cell>
+ <cell></cell>
+ <cell></cell>
+</row>
+<row>
+ <cell>FCCC_C0_0/FCCC_C0_0/GL2_INST:An</cell>
+ <cell>net</cell>
+ <cell>FCCC_C0_0/FCCC_C0_0/GL2_net</cell>
+ <cell></cell>
+ <cell>+</cell>
+ <cell>0.135</cell>
+ <cell>2.869</cell>
+ <cell></cell>
+ <cell>r</cell>
+</row>
+<row>
+ <cell>FCCC_C0_0/FCCC_C0_0/GL2_INST:YSn</cell>
+ <cell>cell</cell>
+ <cell></cell>
+ <cell>ADLIB:GB</cell>
+ <cell>+</cell>
+ <cell>0.110</cell>
+ <cell>2.979</cell>
+ <cell>2</cell>
+ <cell>f</cell>
+</row>
+<row>
+ <cell>FCCC_C0_0/FCCC_C0_0/GL2_INST/U0_RGB1_RGB0:An</cell>
+ <cell>net</cell>
+ <cell>FCCC_C0_0/FCCC_C0_0/GL2_INST/U0_YNn_GSouth</cell>
+ <cell></cell>
+ <cell>+</cell>
+ <cell>0.194</cell>
+ <cell>3.173</cell>
+ <cell></cell>
+ <cell>f</cell>
+</row>
+<row>
+ <cell>FCCC_C0_0/FCCC_C0_0/GL2_INST/U0_RGB1_RGB0:YR</cell>
+ <cell>cell</cell>
+ <cell></cell>
+ <cell>ADLIB:RGB</cell>
+ <cell>+</cell>
+ <cell>0.168</cell>
+ <cell>3.341</cell>
+ <cell>4</cell>
+ <cell>r</cell>
+</row>
+<row>
+ <cell>spi_interface_handler_0/counter[0]:CLK</cell>
+ <cell>net</cell>
+ <cell>FCCC_C0_0/FCCC_C0_0/GL2_INST/U0_RGB1_RGB0_rgbr_net_1</cell>
+ <cell></cell>
+ <cell>+</cell>
+ <cell>0.312</cell>
+ <cell>3.653</cell>
+ <cell></cell>
+ <cell>r</cell>
+</row>
+<row>
+ <cell>spi_interface_handler_0/counter[0]:D</cell>
+ <cell>Library hold time</cell>
+ <cell></cell>
+ <cell>ADLIB:SLE</cell>
+ <cell>+</cell>
+ <cell>0.000</cell>
+ <cell>3.653</cell>
+ <cell></cell>
+ <cell></cell>
+</row>
+<row>
+ <cell>data required time</cell>
+ <cell></cell>
+ <cell></cell>
+ <cell></cell>
+ <cell></cell>
+ <cell></cell>
+ <cell>3.653</cell>
+ <cell></cell>
+ <cell></cell>
+</row>
+<row>
+</row>
+<row>
+ <cell>Operating Conditions</cell>
+ <cell>BEST</cell>
+</row>
+</table>
+</section>
+<section>
+<name>SET External Hold</name>
+<text>No Path</text>
+</section>
+<section>
+<name>SET Clock to Output</name>
+<text>No Path</text>
+</section>
+<section>
+<name>SET Register to Asynchronous</name>
+<text>No Path</text>
+</section>
+<section>
+<name>SET External Removal</name>
+<text>No Path</text>
+</section>
+<section>
+<name>SET Asynchronous to Register</name>
+<text>No Path</text>
+</section>
+</section>
+<section>
+<name>Clock Domain OSC_C0_0/OSC_C0_0/I_RCOSC_25_50MHZ/CLKOUT</name>
+<text></text>
+<section>
+<name>SET Register to Register</name>
+<text>No Path</text>
+</section>
+<section>
+<name>SET External Hold</name>
+<text>No Path</text>
+</section>
+<section>
+<name>SET Clock to Output</name>
+<text>No Path</text>
+</section>
+<section>
+<name>SET Register to Asynchronous</name>
+<text>No Path</text>
+</section>
+<section>
+<name>SET External Removal</name>
+<text>No Path</text>
+</section>
+<section>
+<name>SET Asynchronous to Register</name>
+<text>No Path</text>
+</section>
+</section>
+<section>
+<name>Path Set Pin to Pin</name>
+<section>
+<name>SET Input to Output</name>
+<text>No Path</text>
+</section>
+</section>
+<section>
+<name>Path Set User Sets</name>
+</section>
+</doc>

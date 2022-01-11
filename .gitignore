@@ -21,6 +21,3 @@ smartgen/smartgen.aws
 !smartgen/*/*.gen
 !smartgen/*/*.vhd
 !smartgen/*/*.v
-
-#designer files
-designer/*/*

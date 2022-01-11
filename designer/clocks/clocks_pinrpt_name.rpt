@@ -1,0 +1,18 @@
+----------------------------------------------------------------
+-Pin Report - Date: Tue Jan 11 13:55:58 2022 Pinchecksum: NOT-AVAILABLE
+-Product: Designer
+-Release: v2021.2
+-Version: 2021.2.0.11
+-Design Name: clocks
+-Family: SmartFusion2
+-Die: M2S010
+-Package: 400 VF
+-----------------------------------------------------------------
+
+Port     |Pin |Fixed |Function                                               |Bank    |I/O Std   |Direction                      |I/O state in Flash*Freeze mode |Resistor Pull                      |I/O available in Flash*Freeze mode |Schmitt Trigger |Odt_Static    |Odt Imp (Ohm)  |Low Power Exit |Input Delay |Slew         |Pre-Emphasis      |Output Drive (mA) |Output Load (pF) |
+---------|----|------|-------------------------------------------------------|--------|----------|-------------------------------|-------------------------------|-----------------------------------|-----------------------------------|----------------|--------------|---------------|---------------|------------|-------------|------------------|------------------|-----------------|
+busy      M19  Yes    MSIO8NB2/CAN_TX_EN_N/GPIO_4_A/USB_DATA2_A               Bank2    LVTTL      Output                          TRISTATE                        None                                No                                  ---              ---            ---             ---             ---          ---           ---                4                  5                 
+DEVRST_N  U17  Fixed  DEVRST_N                                                ---      
+mosi      M17  Yes    MSIO11NB2/CCC_NE0_CLKI2/I2C_1_SCL/GPIO_1_A/USB_DATA4_A  Bank2    LVTTL      Output                          TRISTATE                        None                                No                                  ---              ---            ---             ---             ---          ---           ---                4                  5                 
+sclk      H17  Yes    MSIO19PB2/SPI_0_SS3/GPIO_10_A/USB_DATA7_A               Bank2    LVTTL      Output                          TRISTATE                        None                                No                                  ---              ---            ---             ---             ---          ---           ---                4                  5                 
+ss        G18  Yes    MSIO18NB2/SPI_0_SS2/GPIO_9_A/USB_DATA6_A                Bank2    LVTTL      Output                          TRISTATE                        None                                No                                  ---              ---            ---             ---             ---          ---           ---                4                  5                 

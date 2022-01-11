@@ -1,0 +1,78 @@
+INFO: Reading User SDC file C:\Users\myles.clark\OneDrive - University of Florida\Desktop\ClockTesting\constraint\clocks_derived_constraints.sdc.
+INFO: The option "Abort flow if errors are found in SDC" is turned ON in Project Settings> Design flow page. The Place & Route tool will fail if errors are found in associated SDC files. Please uncheck the option to ignore the errors and continue running the tool.
+
+No errors or warnings found.
+INFO: The option "Abort flow if errors are found in PDC" is turned ON in Project Settings> Design flow page. The Place & Route tool will fail if errors are found in associated PDC files. Please uncheck the option to ignore the errors and continue running the tool
+***** Place and Route Configurations *****
+Timing-driven            : ON
+Power-driven             : OFF
+I/O Register Combining   : ON
+High-effort              : OFF
+Repair min-delay         : ON
+Incremental              : OFF
+Inter-clock optimization : ON
+
+INFO: Reading User PDC file C:\Users\myles.clark\OneDrive - University of Florida\Desktop\ClockTesting\constraint\io\user.pdc. 0 error(s) and 0 warning(s)
+
+Running the I/O Bank and Globals Assigner.
+Info:  I/O Bank and Globals Assigner identified 4 fixed I/O macros, 0 unfixed I/O macros
+
+I/O Bank and Globals Assigner completed successfully.
+Total time spent in I/O Bank and Globals Assigner: 0 seconds
+
+Placer V5.0 - 2021.2.0 
+Design: clocks                          Started: Tue Jan 11 13:55:40 2022
+
+Initializing Normal-Effort Timing-Driven Placement ...
+Clustering ...
+Placing ...
+Improving placement ...
+End of placement.
+
+Placer Runtime Summary   :
+Clustering (1 pass)      : 0 seconds
+Placement                : 0 seconds
+Improvement              : 0 seconds
+
+Placer completed successfully.
+
+Design: clocks                          
+Finished: Tue Jan 11 13:55:48 2022
+Total CPU Time:     00:00:07            Total Elapsed Time: 00:00:08
+Total Memory Usage: 288.1 Mbytes
+                        o - o - o - o - o - o
+
+
+Router 
+Design: C:\Users\myles.clark\OneDrive - University of Florida\Desktop\ClockTesting\designer\clocks\clocksStarted: Tue Jan 11 13:55:50 2022
+
+
+Router completed successfully.
+
+Design: C:\Users\myles.clark\OneDrive - University of Florida\Desktop\ClockTesting\designer\clocks\clocks
+Finished: Tue Jan 11 13:55:53 2022
+Total CPU Time:     00:00:02            Total Elapsed Time: 00:00:03
+Total Memory Usage: 446.0 Mbytes
+                        o - o - o - o - o - o
+
+Info: Iteration 1:
+  Total violating paths eligible for improvement: 0
+  Worst minimum delay slack: 
+Resource Usage
++---------------+------+-------+------------+
+| Type          | Used | Total | Percentage |
++---------------+------+-------+------------+
+| 4LUT          | 118  | 12084 | 0.98       |
+| DFF           | 78   | 12084 | 0.65       |
+| I/O Register  | 0    | 579   | 0.00       |
+| Logic Element | 118  | 12084 | 0.98       |
++---------------+------+-------+------------+
+
+I/O Placement
++--------+-------+------------+
+| Type   | Count | Percentage |
++--------+-------+------------+
+| Locked |  4    | 100.00%    |
+| Placed |  0    | 0.00%      |
++--------+-------+------------+
+

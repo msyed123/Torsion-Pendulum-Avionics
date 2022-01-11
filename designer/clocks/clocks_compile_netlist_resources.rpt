@@ -1,0 +1,167 @@
+Resource Report
+Microsemi Corporation - Microsemi Libero Software Release v2021.2 (Version 2021.2.0.11)
+Date: Tue Jan 11 13:55:33 2022
+
+Device Selection
++--------------------------------+----------------+
+| Family                         | SmartFusion2   |
+| Device                         | M2S010         |
+| Package                        | 400 VF         |
+| Speed Grade                    | STD            |
+| Temp                           | 0:25:85        |
+| Voltage                        | 1.26:1.20:1.14 |
+| Core Voltage                   | 1.2V           |
+| Ramp Rate                      | 100ms Minimum  |
+| System Controller Suspend Mode | No             |
+| PLL Supply Voltage             | 2.5V           |
+| Default I/O technology         | LVTTL          |
+| Restrict Probe Pins            | Yes            |
+| Restrict SPI Pins              | No             |
++--------------------------------+----------------+
+
+Source Files
++---------+------------------------------------------------------------------------------------------------+
+| Topcell | clocks                                                                                         |
+| Format  | Verilog                                                                                        |
+| Source  | C:\Users\myles.clark\OneDrive - University of Florida\Desktop\ClockTesting\synthesis\clocks.vm |
++---------+------------------------------------------------------------------------------------------------+
+
+Options
++----------------------------------------------------+-------+
+| Enable Single Event Transient mitigation           | false |
+| Enable Design Separation Methodology               | false |
+| Limit the number of high fanout nets to display to | 10    |
++----------------------------------------------------+-------+
+
+Resource Usage
++---------------------------+------+-------+------------+
+| Type                      | Used | Total | Percentage |
++---------------------------+------+-------+------------+
+| 4LUT                      | 118  | 12084 | 0.98       |
+| DFF                       | 78   | 12084 | 0.65       |
+| I/O Register              | 0    | 585   | 0.00       |
+| User I/O                  | 4    | 195   | 2.05       |
+| -- Single-ended I/O       | 4    | 195   | 2.05       |
+| -- Differential I/O Pairs | 0    | 97    | 0.00       |
+| RAM64x18                  | 0    | 22    | 0.00       |
+| RAM1K18                   | 0    | 21    | 0.00       |
+| MACC                      | 0    | 22    | 0.00       |
+| Chip Globals              | 3    | 8     | 37.50      |
+| CCC                       | 1    | 2     | 50.00      |
+| RCOSC_25_50MHZ            | 1    | 1     | 100.00     |
+| RCOSC_1MHZ                | 0    | 1     | 0.00       |
+| XTLOSC                    | 0    | 1     | 0.00       |
+| MSS                       | 0    | 1     | 0.00       |
++---------------------------+------+-------+------------+
+
+Detailed Logic Resource Usage
++--------------------------+------+-----+
+| Type                     | 4LUT | DFF |
++--------------------------+------+-----+
+| Fabric Logic             | 118  | 78  |
+| RAM64x18 Interface Logic | 0    | 0   |
+| RAM1K18 Interface Logic  | 0    | 0   |
+| MACC Interface Logic     | 0    | 0   |
+| Total Used               | 118  | 78  |
++--------------------------+------+-----+
+
+Detailed Carry Chains Resource Usage
++--------+------+
+| Length | Used |
+| 7      | 1    |
+| 32     | 1    |
+| 33     | 1    |
+| Total  | 3    |
++--------+------+
+
+I/O Function
++-------------------------------+--------------+-------------+-----------------+
+| Type                          | w/o register | w/ register | w/ DDR register |
++-------------------------------+--------------+-------------+-----------------+
+| Input I/O                     | 0            | 0           | 0               |
+| Output I/O                    | 4            | 0           | 0               |
+| Bidirectional I/O             | 0            | 0           | 0               |
+| Differential Input I/O Pairs  | 0            | 0           | 0               |
+| Differential Output I/O Pairs | 0            | 0           | 0               |
++-------------------------------+--------------+-------------+-----------------+
+
+I/O Technology
++--------------+--------+------+-------+--------+---------------+
+| I/O Standard | Vddi   | Vref | Input | Output | Bidirectional |
++--------------+--------+------+-------+--------+---------------+
+| LVTTL        |  3.30v |  N/A |  0    |  4     |  0            |
++--------------+--------+------+-------+--------+---------------+
+
+Nets assigned to chip global resources
++--------+---------+----------------------------------------------+
+| Fanout | Type    | Name                                         |
++--------+---------+----------------------------------------------+
+| 45     | INT_NET | Net   : FCCC_C0_0_GL1                        |
+|        |         | Driver: FCCC_C0_0/FCCC_C0_0/GL1_INST/U0_RGB1 |
+|        |         | Source: NETLIST                              |
+| 36     | INT_NET | Net   : AND2_1_Y_arst                        |
+|        |         | Driver: ResetN_RNIHNU6/U0_RGB1               |
+|        |         | Source: NETLIST                              |
+| 33     | INT_NET | Net   : FCCC_C0_0_GL2                        |
+|        |         | Driver: FCCC_C0_0/FCCC_C0_0/GL2_INST/U0_RGB1 |
+|        |         | Source: NETLIST                              |
++--------+---------+----------------------------------------------+
+
+Nets assigned to row global resources
++--------+------+------+
+| Fanout | Type | Name |
++--------+------+------+
++--------+------+------+
+
+High fanout nets
++--------+---------+-----------------------------------------------+
+| Fanout | Type    | Name                                          |
++--------+---------+-----------------------------------------------+
+| 33     | INT_NET | Net   : spi_master_0/un1_reset_n_inv_Z        |
+|        |         | Driver: spi_master_0/un1_reset_n_inv          |
+| 32     | INT_NET | Net   : spi_master_0/state_RNIH2JF1_Y[0]      |
+|        |         | Driver: spi_master_0/state_RNIH2JF1[0]        |
+| 11     | INT_NET | Net   : spi_master_0/state_Z[0]               |
+|        |         | Driver: spi_master_0/state[0]                 |
+| 10     | INT_NET | Net   : spi_master_0/un7_count_NE_i           |
+|        |         | Driver: spi_master_0/un7_count_NE_20_RNIKPBF1 |
+| 9      | INT_NET | Net   : AND2_1_Y                              |
+|        |         | Driver: ResetN                                |
+| 6      | INT_NET | Net   : spi_interface_handler_0_enable        |
+|        |         | Driver: spi_interface_handler_0/enable        |
+| 6      | INT_NET | Net   : spi_master_0/clk_togglese             |
+|        |         | Driver: spi_master_0/un1_enable_RNIDAJV1[0]   |
+| 5      | INT_NET | Net   : spi_master_0/clk_toggles_cry_cy_Y[0]  |
+|        |         | Driver: spi_master_0/clk_toggles_cry_cy[0]    |
+| 5      | INT_NET | Net   : spi_master_0/un10_count_i             |
+|        |         | Driver: spi_master_0/un10_count               |
+| 4      | INT_NET | Net   : spi_master_0/clk_toggles_Z[5]         |
+|        |         | Driver: spi_master_0/clk_toggles[5]           |
++--------+---------+-----------------------------------------------+
+
+High fanout nets (through buffer trees)
++--------+---------+-----------------------------------------------+
+| Fanout | Type    | Name                                          |
++--------+---------+-----------------------------------------------+
+| 33     | INT_NET | Net   : spi_master_0/un1_reset_n_inv_Z        |
+|        |         | Driver: spi_master_0/un1_reset_n_inv          |
+| 32     | INT_NET | Net   : spi_master_0/state_RNIH2JF1_Y[0]      |
+|        |         | Driver: spi_master_0/state_RNIH2JF1[0]        |
+| 11     | INT_NET | Net   : spi_master_0/state_Z[0]               |
+|        |         | Driver: spi_master_0/state[0]                 |
+| 10     | INT_NET | Net   : spi_master_0/un7_count_NE_i           |
+|        |         | Driver: spi_master_0/un7_count_NE_20_RNIKPBF1 |
+| 9      | INT_NET | Net   : AND2_1_Y                              |
+|        |         | Driver: ResetN                                |
+| 6      | INT_NET | Net   : spi_interface_handler_0_enable        |
+|        |         | Driver: spi_interface_handler_0/enable        |
+| 6      | INT_NET | Net   : spi_master_0/clk_togglese             |
+|        |         | Driver: spi_master_0/un1_enable_RNIDAJV1[0]   |
+| 5      | INT_NET | Net   : spi_master_0/clk_toggles_cry_cy_Y[0]  |
+|        |         | Driver: spi_master_0/clk_toggles_cry_cy[0]    |
+| 5      | INT_NET | Net   : spi_master_0/un10_count_i             |
+|        |         | Driver: spi_master_0/un10_count               |
+| 4      | INT_NET | Net   : spi_master_0/clk_toggles_Z[5]         |
+|        |         | Driver: spi_master_0/clk_toggles[5]           |
++--------+---------+-----------------------------------------------+
+
